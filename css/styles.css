@@ -1,4 +1,24 @@
 body {
-  width: 100%; }
+  width: 100%;
+  margin: 0; }
+
+#fullwidth {
+  width: 100%;
+  position: relative;
+  margin: 0; }
+
+#pictures {
+  line-height: 0;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 0;
+  -moz-column-count: 5;
+  -moz-column-gap: 0;
+  column-count: 0;
+  column-gap: 0; }
+
+#pictures img {
+  width: 100% !important;
+  height: auto !important;
+  opacity: 0.5; }
 
 /*# sourceMappingURL=styles.css.map */
