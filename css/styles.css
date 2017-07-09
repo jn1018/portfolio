@@ -2,16 +2,21 @@ body {
   width: 100%;
   margin: 0; }
 
+html {
+  font-size: 100%; }
+
 #fullwidth {
   width: 100%;
   position: relative;
   margin: 0; }
 
 #fullwidth h1 {
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  color: #50687d;
+  font-size: 220%;
   position: absolute;
   text-transform: uppercase;
-  top: 30%;
+  top: 279px;
   right: 40px;
   z-index: 2; }
 
@@ -22,11 +27,14 @@ body {
   -moz-column-count: 5;
   -moz-column-gap: 0;
   column-count: 0;
-  column-gap: 0; }
+  column-gap: 0;
+  position: absolute;
+  top: 335px;
+  background-color: #053C6D; }
 
 #pictures img {
   width: 100% !important;
   height: auto !important;
-  opacity: 0.5; }
+  opacity: 0.4; }
 
 /*# sourceMappingURL=styles.css.map */
