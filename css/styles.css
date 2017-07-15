@@ -10,13 +10,13 @@ html {
   position: relative;
   margin: 0; }
 
-#fullwidth h1 {
-  font-family: "Rajdhani", sans-serif;
+#fullwidth .leadname {
+  font-family: "Halant", serif;
   color: #50687d;
-  font-size: 220%;
+  font-size: 280%;
   position: absolute;
   text-transform: uppercase;
-  top: 279px;
+  top: 289px;
   right: 40px;
   z-index: 2; }
 
