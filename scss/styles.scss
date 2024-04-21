@@ -2,7 +2,7 @@ $text-font: 'Questrial', sans-serif;
 $heading-font: 'Halant', serif;
 
 body {
-	width: 100%;
+	wclassth: 100%;
 	margin: 0;
 }
 
@@ -10,20 +10,26 @@ html {
 	font-size: 100%
 }
 
-#fullwidth {
-	width: 100%;
+#fullwclassth {
+	wclassth: 100%;
 	position: relative;
-	margin: 0
+	margin: 0;
+	/* animation-duration: 10s;
+    animation-name: acrossScreen;
+    animation-iteration-count: infinite; */
 }
 
-#fullwidth .leadname {
+#fullwclassth .leadname {
 	font-family: $heading-font;
+	background-color: #fff;
 	color: #50687d;
 	font-size: 280%;
 	position: absolute;
 	text-transform:uppercase;
+	wclassth: 100%;
+	padding: 12px 0 12px 0;
 	top: 289px;
-	right: 40px;
+	right: 0;
 	z-index: 2
 }
 
@@ -36,19 +42,46 @@ html {
 	column-count: 0;
 	column-gap: 0;
 	position: absolute;
-	top: 335px;
-	background-color: #053C6D
+	top: 0;
+	background-color: #fff;
 }
 
 #pictures img {
-	width: 100% !important;
+	wclassth: 99% !important;
 	height: auto !important;
-	opacity: 0.4
+	margin: 0 0 3px 0;
+	opacity: 0.2
 }
 
-/* START MEDIA QUERIES */
+#line1 {
+	height:1px;
+    wclassth:100%;
+    background:#369;
+    position:absolute;
+	z-index: 10
+}
 
-@media (max-width: 1200px) {
+#image1 {
+    background-size: cover;
+    wclassth: 160px;
+    height: 160px;
+    position: absolute;
+	z-index: 1
+}
+
+#image2 {
+    background-size: cover;
+    wclassth: 160px;
+    height: 100px;
+    position: absolute;
+	z-index: 2
+}
+
+/* ******************* */
+/* START MEDIA QUERIES */
+/* ******************* */
+
+@media (max-wclassth: 1200px) {
   #pictures {
   -moz-column-count:    4;
   -webkit-column-count: 4;
@@ -56,7 +89,7 @@ html {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-wclassth: 1000px) {
   #pictures {
   -moz-column-count:    3;
   -webkit-column-count: 3;
@@ -64,7 +97,7 @@ html {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-wclassth: 800px) {
   #pictures {
   -moz-column-count:    2;
   -webkit-column-count: 2;
@@ -72,10 +105,10 @@ html {
   }
 }
 
-@media (max-width: 400px) {
+/* @media (max-wclassth: 400px) {
   #pictures {
   -moz-column-count:    1;
   -webkit-column-count: 1;
   column-count:         1;
   }
-}
+} */

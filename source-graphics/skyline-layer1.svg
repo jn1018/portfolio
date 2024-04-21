@@ -1,0 +1,41 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 981.52 337">
+	<defs>
+		<!-- gradient fill definitions -->
+		<linearGradient id="morning">
+            <stop offset="0" stop-color="#FE938C"/>
+            <stop offset="1" stop-color="#EAD2EC"/>
+        </linearGradient>
+		<linearGradient id="afternoon">
+            <stop offset="0" stop-color="red"/>
+            <stop offset="1" stop-color="purple"/>
+        </linearGradient>
+		<linearGradient id="evening">
+            <stop offset="0" stop-color="#a7c7dc"/>
+            <stop offset="1" stop-color="#9b91f2"/>
+        </linearGradient>
+		<linearGradient id="late-evening">
+            <stop offset="0" stop-color="#3c73a3"/>
+            <stop offset="1" stop-color="#552cb7"/>
+        </linearGradient>
+		
+		<style>
+			.cls-1 {
+			   fill: url(#morning);
+			   stroke:#000;
+			   stroke-miterlimit:10;
+			}
+			.qtrface {
+			   fill:#EDEDED;
+			   stroke:#000;
+			   stroke-miterlimit:10;
+			}
+			.sideface {
+			   fill: url(#late-evening);
+			   stroke:#000;
+			   stroke-miterlimit:10;
+			}
+		</style>
+	</defs>
+	<title>skyline-layer1</title>
+	<polygon class="cls-1" points="1.02 321 1.02 199 31.02 237 31.02 335.5 0.52 335.5 1.02 321"/><polygon class="sideface" points="30.77 236.5 57.02 199 57.02 335.5 30.52 335.5 30.77 236.5"/><path class="cls-1" d="M4.59,206.22,31.92,170.5V200a30.51,30.51,0,0,0,6,0V174.57L61.1,206.22l-26.73,38.5Z" transform="translate(-3.9 -7.5)"/><polygon class="cls-1" points="77.02 323 77.02 223.5 93.02 223.5 93.02 322.5 89.52 322.5 89.18 308.5 80.52 308.5 80.18 322.5 77.02 323"/><polygon class="sideface" points="93.02 223 93.02 322.5 116.02 322.5 116.02 230 93.02 223"/><polygon class="sideface" points="177.6 179 190.02 182.67 190.02 328.5 177.52 328.5 177.6 179"/><polygon class="sideface" points="186.02 289.75 215.02 293.67 215.02 326 186.02 325.5 186.02 289.75"/><polygon class="sideface" points="163.02 164.25 171.02 167.67 171.02 179 163.02 178.5 163.02 164.25"/><polygon class="cls-1" points="163.02 178.5 163.02 164.5 122.02 164.5 122.02 178.5 120.02 178.5 120.02 327.5 178.02 327.5 178.02 178.5 163.02 178.5"/><rect class="cls-1" x="156.02" y="289.5" width="30" height="36"/><polygon class="cls-1" points="264.02 331.5 264.02 104 264.02 0.5 310.02 0.5 310.02 331.5 264.02 331.5"/><polygon class="sideface" points="402.52 199.75 418.02 204.33 418.02 216 402.02 213.5 402.52 199.75"/><polygon class="sideface" points="310.02 1 331.02 10 331.02 120 331.02 332 310.02 331.5 310.02 1"/><polygon class="cls-1" points="403.02 213.5 403.02 199.5 341.02 199.5 341.02 213.5 334.02 213.5 334.02 326 334.02 331.5 411.02 332 411.02 213.5 403.02 213.5"/><polygon class="sideface" points="411.02 213.75 428.02 216.33 428.02 332 411.02 332.5 411.02 213.75"/><polygon class="cls-1" points="443.02 332.5 443.02 256.5 447.02 256.5 447.02 250.5 451.02 250.5 451.02 227.5 485.52 227.5 491.02 227.5 491.02 332.5 443.02 332.5"/><polygon class="sideface" points="491.02 227.75 504.02 230.67 504.02 333.5 491.02 333.5 491.02 227.75"/><polygon class="cls-1" points="506.02 332.5 506.02 214 538.02 213.75 538.02 332.5 506.02 332.5"/><polygon class="sideface" points="537.6 214 551.02 217.67 551.02 332.5 537.52 332.5 537.6 214"/><polygon class="cls-1" points="556.85 332.5 557.52 263 591.52 263 591.52 332.5 556.85 332.5"/><polygon class="cls-1" points="595.18 331.5 595.18 232 628.18 232 628.18 235.67 655.85 235.67 655.85 232 694.52 232 694.52 331.5 595.18 331.5"/><polygon class="sideface" points="694.85 232 700.52 233.33 699.18 331.5 693.85 331.5 694.85 232"/><polygon class="cls-1" points="812.02 336.5 812.02 175 821.02 174.56 821.02 166.5 841.52 166.5 849.02 166.5 849.02 175 865.02 174.56 865.02 336.5 812.02 336.5"/><rect class="cls-1" x="742.85" y="174.67" width="22.33" height="158.83"/><path class="qtrface" d="M768.75,182.17c1.71-.49,4.85.76,4.67,1.33l7,5.67V341H768.75Z" transform="translate(-3.9 -7.5)"/><path class="cls-1" d="M782.42,341l.67-158.17a1.84,1.84,0,0,1,.5-1.83,4.71,4.71,0,0,1,2-.83h4.17v-6.33l4.83-1.67,6-.83h3V341Z" transform="translate(-3.9 -7.5)"/><polygon class="qtrface" points="798.85 333.5 798.85 163.83 817.52 166.5 817.52 333.67 798.85 333.5"/><path class="cls-1" d="M820.92,185a2.62,2.62,0,0,1,.92-1.92c1-1,4-1,4-1l17.13.07V341.5l-22-.5Z" transform="translate(-3.9 -7.5)"/><polygon class="cls-1" points="900.02 334.5 900.02 266.5 906.02 266.5 906.02 263.5 936.02 263.5 936.02 268.5 946.02 268.5 946.02 334.5 900.02 334.5"/><polygon class="cls-1" points="951.02 335.5 951.02 317.5 972.02 317.5 972.02 312.5 981.02 312.5 981.02 335.5 951.02 335.5"/>
+</svg>

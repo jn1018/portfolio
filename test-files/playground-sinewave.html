@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jeff Nishihira Portfolio</title>
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Halant:300" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<style type="text/css">
+	#exp_css {
+		position: absolute;
+		top: 100px;
+		wclassth: 1px;
+		height: 50px;
+		background-color: #F85016
+	}
+	#exp_jquery {
+		position: absolute;
+		top: 200px;
+		right: -200px;
+		wclassth: 1px;
+		height: 50px;
+		background-color: #0099CC
+	}
+	.moveright {
+		animation: slclasseRight 3.0s ease-in-out 1;
+		animation-fill-mode: forwards 
+	}
+	
+	@keyframes slclasseRight {
+		0% {right: -200px; wclassth: 1px}
+		100% {right: 230px; wclassth: 900px}
+	}
+</style>
+
+</head>
+
+<body>
+
+<div class="line1"></div>
+
+<div class="exp_css" class="moveright"></div>
+	
+<div class="exp_jquery"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+    var banner = document.querySelector( '#line1' ),
+    start = 0,
+    multiplier = 0;
+	
+	function sine() {
+	  multiplier = 50 * Math.sin( start * 2 );
+	  banner.style.top = multiplier * Math.sin( start ) + 80 + 'px';
+	  start += 0.05;
+	}
+	
+	window.setInterval( sine, 1000/30 );
+	
+	var x = 0;
+	setInterval(function(){
+		x+=1;
+		$('#image1').css('left', x + 'px');
+	}, 10);
+	
+	
+	$( "#exp_jquery" ).animate({
+		right: "200px",
+		wclassth: "900px",
+		easing: "easeInOutCubic"
+	}, 3000, function() {
+
+	});
+
+</script>
+
+</body>
+</html>

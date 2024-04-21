@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeff Nishihira Portfolio</title>
+<link href="https://fonts.googleapis.com/css?family=Archivo|Poppins" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="css/styles2.css">
+
+</head>
+
+<body>
+
+<div id="barba-wrapper">
+  
+	<div class="barba-container">
+
+	<div id="maininfo">
+
+		<ul id="mainnavlist">
+			<li><a id="aboutnav" class="mainnav" href="/about">about</a></li>
+			<li><a id="projectsnav" class="mainnav" href="/projects">projects</a></li>
+			<li><a id="contactnav" class="mainnav" href="/contact">contact</a></li>
+		</ul>
+
+		<a id="nav-toggle"><div><span></span></div></a>
+
+		<div id="svg-container">		
+
+		</div> <!-- / #svg-container -->
+
+	</div> <!-- / #maininfo -->
+
+	<div id="overlay">
+		<div id="progstat"></div>
+		<div id="progress"></div>
+	</div>
+
+	<!-- #main -->
+
+	<div id="main">
+
+	   <svg class="knockout-project-header" width="100%" height="80px">
+
+		   <rect class="project-heading-mask-bg" width="100%" height="100%" x="0" y="0" fill-opacity="1" mask="url(#project-heading-mask)" />
+
+			<mask id="project-heading-mask">
+			  <rect width="100%" height="100%" fill="#FFF" x="0" y="0" />
+			  <text x="98%" y="100%" fill="#000" text-anchor="end" class="projects-outline">Projects</text>
+			</mask>
+
+		</svg>
+
+
+	   <div id="ic_0" class="inner-container">
+		   <div class="inner-container2" id="inner0"></div>
+	   </div>
+
+	   <div id="ic_1" class="inner-container">
+		   <div class="inner-container2" id="inner1">
+			   <a class="project-next" onClick="loadGridItems('2', 'left')">&rarr;</a>
+		   </div>
+	   </div>
+
+	   <div id="ic_2" class="inner-container">
+		   <div class="inner-container2" id="inner2">
+			   <a class="project-prev" onClick="loadGridItems('1', 'right')">&larr;</a>
+			   <a class="project-next" onClick="loadGridItems('3', 'left')">&rarr;</a>
+		   </div>
+	   </div>
+
+	   <div id="ic_3" class="inner-container">
+		   <div class="inner-container2" id="inner3">
+			   <a class="project-prev" onClick="loadGridItems('2', 'right')">&larr;</a>
+			   <a class="project-next" onClick="loadGridItems('4', 'left')">&rarr;</a>
+		   </div>
+	   </div>
+
+	   <div id="ic_4" class="inner-container">
+		   <div class="inner-container2" id="inner4">
+			   <a class="project-prev" onClick="loadGridItems('3', 'right')">&larr;</a>
+			   <a class="project-next" onClick="loadGridItems('5', 'left')">&rarr;</a>
+		   </div>
+	   </div>
+
+	   <div id="ic_5" class="inner-container">
+		   <div class="inner-container2" id="inner5">
+			   <a class="project-prev" onClick="loadGridItems('4', 'right')">&larr;</a>
+		   </div>
+	   </div>
+
+	   <div id="thumbs_0" class="thumbs">
+	   </div>
+
+	   <div id="thumbs_1" class="thumbs">
+	   </div>
+
+	   <div id="thumbs_2" class="thumbs">
+	   </div>
+
+	   <div id="thumbs_3" class="thumbs">
+	   </div>
+
+	   <div id="thumbs_4" class="thumbs">
+	   </div>
+
+	   <div id="thumbs_5" class="thumbs">
+	   </div>
+
+
+	   <div id="info_0" class="info-container">
+
+			   <a id="projects_1_link" class="projlink" onClick="loadGridItems('1', 'left')">NLU Website</a>
+			   <a id="projects_2_link" class="projlink" onClick="loadGridItems('2', 'left')">NLU Eagle Logo</a>
+			   <a id="projects_3_link" class="projlink" onClick="loadGridItems('3', 'left')">Chipotle</a>
+			   <a id="projects_4_link" class="projlink" onClick="loadGridItems('4', 'left')">Mearra</a>
+			   <a id="projects_5_link" class="projlink" onClick="loadGridItems('5', 'left')">Chicago Comedy Film Festival</a>
+
+	   </div>
+
+		   <div id="info_1" class="info-container">
+			   <p class="project-heading">National Louis University Website</p>
+			   <p>As a web designer and developer for National Louis University, I was involved in the development and maintenance of nearly all web-related materials, including the main website, university blog, promotional microsites, advertising banners, and marketing emails.</p>
+			   <a href="nluwebsite/index.html" class="proj-button" style="background-color: #0099CC">Explore</a>
+			   <a href="https://www.nl.edu" target="_blank" class="proj-button" style="background-color: #0099CC">Visit Site</a>
+		   </div>
+
+		   <div id="info_2" class="info-container">
+			   <p class="project-heading">NLU Pathways Logo</p>
+			   <p>The NLU Eagle is used for NLU's Pathways Program and is displayed in many various forms, including T-shirts, buttons, and official university merchandise.</p>
+			   <a href="https://www.nl.edu" target="_blank" class="proj-button" style="background-color: #0099CC">Explore</a>
+		   </div>
+
+		   <div id="info_3" class="info-container">
+			   <p class="project-heading">Chipotle</p>
+			   <p>Danaco Solutions requested a online tool where farmers could provide information about being potential local suppliers for its client, Chipotle.</p>
+			   <a href="danaco-chipotle" target="_blank" class="proj-button" style="background-color: #441400">View Project</a>
+		   </div>
+
+		   <div id="info_4" class="info-container">
+			   <p class="project-heading">Mearra: Selkie of the Sea</p>
+			   <p>The website for the musical production by Linda M. Smith.</p>
+			   <a href="http://www.lindamsmith.com/mearra" target="_blank" class="proj-button" style="background-color: #0099CC">View Site</a>
+		   </div>
+
+		   <div id="info_5" class="info-container">
+			   <p class="project-heading">Chicago Comedy Film Festival poster</p>
+			   <p>Won open contests with these entries for the 2014 and 2016 Chicago Comedy Film Festival.</p>
+			   <a href="https://www.nl.edu" target="_blank" class="proj-button" style="background-color: #0099CC">Explore</a>
+		   </div>
+
+	</div> 
+	<!-- /. #main -->
+      
+</div> <!-- / #barba-container-->
+   
+</div> <!-- / #barba-wrapper -->
+       
+<div hidden>
+    <img src="images/large/projects_0_1.jpg">
+    <img src="images/large/projects_0_2.jpg">
+    <img src="images/large/projects_1_1.jpg">
+    <img src="images/large/projects_1_1.jpg">
+    <img src="images/large/projects_2_1.jpg">
+    <img src="images/large/projects_2_2.jpg">
+    <img src="images/large/projects_3_1.jpg">
+    <img src="images/large/projects_3_2.jpg">
+    <img src="images/large/projects_4_1.jpg">
+    <img src="images/large/projects_4_2.jpg">
+    <img src="images/large/projects_5_1.jpg">
+    <img src="images/large/projects_5_2.jpg">
+    <img src="images/thumbs/nlu-1-dsk.jpg">
+	<img src="images/thumbs/nlu-2-dsk.jpg">
+	<img src="images/thumbs/nlu-3-dsk.jpg">
+	<img src="images/thumbs/nlu-4-dsk.jpg">
+	<img src="images/thumbs/nlu-5-dsk.jpg">
+	<img src="images/thumbs/eagle-1-dsk.jpg">
+	<img src="images/thumbs/eagle-2-dsk.jpg">
+	<img src="images/thumbs/eagle-3-dsk.jpg">
+	<img src="images/thumbs/chipotle-1-dsk.jpg">
+	<img src="images/thumbs/chipotle-2-dsk.jpg">
+	<img src="images/thumbs/chipotle-3-dsk.jpg">
+	<img src="images/thumbs/mearra-1-dsk.jpg">
+	<img src="images/thumbs/mearra-2-dsk.jpg">
+	<img src="images/thumbs/nlu-1-mob.jpg">
+	<img src="images/thumbs/nlu-2-mob.jpg">
+	<img src="images/thumbs/nlu-3-mob.jpg">
+	<img src="images/thumbs/nlu-4-mob.jpg">
+	<img src="images/thumbs/nlu-5-mob.jpg">
+	<img src="images/thumbs/eagle-1-mob.jpg">
+	<img src="images/thumbs/eagle-2-mob.jpg">
+	<img src="images/thumbs/eagle-3-mob.jpg">
+	<img src="images/thumbs/chipotle-1-mob.jpg">
+	<img src="images/thumbs/chipotle-2-mob.jpg">
+	<img src="images/thumbs/chipotle-3-mob.jpg">
+	<img src="images/thumbs/mearra-1-mob.jpg">
+	<img src="images/thumbs/mearra-2-mob.jpg">
+</div> <!-- /.image preload -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>  
+<script src="js/jquery.mobile.custom.min.js"></script>      
+
+<script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='/js/jquery-3.3.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script> 
+<script src="js/sitecore.js"></script>    
+</body>
+</html>

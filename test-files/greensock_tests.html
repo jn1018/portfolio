@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GreenSock Tests</title>
+<style type="text/css">
+	
+	
+
+#menu {
+  height: 100vh;
+  background-color: #000222;
+  position:relative;
+  overflow: hidden;
+  width:100%;
+}
+
+.menu-option {
+    padding: 0;
+  /*require for ken burns*/
+  width: 25%;
+  height: 100vh;
+  position:absolute;
+}
+
+.menu-option:hover {
+  cursor: pointer;
+  -webkit-transition: background-color 600ms ease-out;
+  -moz-transition: background-color 600ms ease-out;
+  -o-transition: background-color 600ms ease-out;
+  transition: background-color 600ms ease-out;
+}
+.menu-option:nth-child(1){left: 0%;}
+.menu-option:nth-child(2){left: 25%;}
+.menu-option:nth-child(3){left: 50%;}
+.menu-option:nth-child(4){left: 75%;}
+
+.menu-option:nth-child(1):hover {
+  background: red;}
+
+.menu-option:nth-child(2):hover {
+  background: green;
+}
+ 
+
+
+.menu-option:nth-child(3):hover {
+  background: yellow;
+}
+
+.menu-option:nth-child(4):hover {
+  background: pink;
+}
+	
+.my-element {
+	position: absolute;
+	left: -20px;
+	top: 20px;
+    width: 200px; 
+	height: 80px;
+	background-color: #2A7D0E;
+	z-index: 40
+}
+
+</style>
+</head>
+<body>
+	
+
+<div class="my-element"></div>
+
+	
+
+<section class="text-center" class="menu">
+<div class="menu-option" class="company">
+<div class="ken_burns"></div>
+<div class="pt-custom">
+<h1>Text</h1>
+<hr/>
+<p>Text, Text and more text.</p>
+</div>
+<div class="arrowd"><a href="#"><span></span></a></div>
+</div>
+<div class="menu-option" class="work">
+<div class="ken_burns"></div>
+<div class="pt-custom">
+<h1>Some Text</h1>
+<hr/>
+<p>Just Text Here.</p>
+</div>
+<div class="arrowd"><a href=""><span></span></a></div>
+</div>
+<div class="menu-option" class="customers">
+<div class="ken_burns"></div>
+<div class="pt-custom">
+<h1>Some Text</h1>
+<hr/>
+<p>Some Text Here.</p>
+</div>
+<div class="arrowd"><a href=""><span></span></a></div>
+</div>
+<div class="menu-option" class="contact">
+<div class="ken_burns"></div>
+<div class="pt-custom">
+<h1>Some Text</h1>
+<hr/>
+<p>Some Text Here.</p>
+</div>
+<div class="arrowd"><a href=""><span></span></a></div>
+</div>
+</section>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>	
+<script>
+	
+
+var timeline = new TimelineMax();
+var menuOption = $('.menu-option');
+
+menuOption.on('mouseover', (e) => {
+  var progress = timeline.progress();
+  if (progress ===1){
+    timeline.reverse(0);
+    return;
+  }
+  else{timeline = new TimelineMax();}
+  switch (e.currentTarget.class) {
+    case 'company':
+      timeline
+        .to('#work, #customers, #contact', .5,  {left:"+=" + "15%"}, 0)
+        .to(e.currentTarget, .5, { width:"40%"}, 0);
+      break;
+
+    case 'work':
+      timeline
+        .to('#customers, #contact', .5, {left:"+=" + "50%"}, 0)
+        .to('#company', .5, {left:"-=" + "25%"}, 0)
+        .to(e.currentTarget, .5, { width:       '100%',left:"-=" + "25%"}, 0)
+      break;
+      
+          case 'customers':
+      timeline
+        .to('#work, #company', .5, {left:"-=" + "50%"}, 0)
+        .to('#contact', .5, {left:"+=" + "25%"}, 0)
+        .to(e.currentTarget, .5, { width: '100%',left:"-=" + "50%"}, 0)
+      break;
+      
+          case 'contact':
+      timeline
+        .to('#work, #customers, #company', .5, {left:"-=" + "75%"}, 0)
+        .to(e.currentTarget, .5, { width: '100%',left:"-=" + "75%"}, 0)
+      break;
+
+  }
+
+});
+	
+TweenMax.to('.my-element', 3, {opacity: .5, width: 100, left: 200});
+
+
+</script>
+
+</body>
+</html>

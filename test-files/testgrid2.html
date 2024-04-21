@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Grid</title>
+
+<link href="https://fonts.googleapis.com/css?family=Archivo|Habibi" rel="stylesheet"> 
+
+<style type="text/css">
+	
+	* {
+		box-sizing: border-box
+	}
+	
+	body {
+		font-family: 'Archivo', sans-serif;
+		margin: 0;
+		padding: 0
+	}
+	
+	#collage-container {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 40%;
+		height: 40%
+	}
+	
+	.collage-background, .collage-background1, .collage-background2, .collage-background3 {
+		position: relative;
+		width: 16.6%;
+		padding-top: 16.6%;
+		float: left;
+		background-repeat: repeat-x
+	}
+	
+	.collage-background {
+		background-color: #1383A0
+	}
+	
+	.collage-background1 {
+		background: #26384C url('images/portfolio-image-grid1.jpg');
+		-webkit-animation: 25s scroll-bkgd infinite linear;
+		-moz-animation: 25s scroll-bkgd infinite linear;
+		-o-animation: scroll-bkgd infinite linear;
+		-ms-animation: 25s scroll-bkgd infinite linear;
+		animation: 25s scroll-bkgd infinite linear
+	}
+	
+	.collage-background2 {
+		background: #26384C url('images/portfolio-image-grid2.jpg');
+		-webkit-animation: 35s scroll-bkgd infinite linear;
+		-moz-animation: 35s scroll-bkgd infinite linear;
+		-o-animation: scroll-bkgd infinite linear;
+		-ms-animation: 35s scroll-bkgd infinite linear;
+		animation: 35s scroll-bkgd infinite linear
+	}
+	
+	.collage-background3 {
+		background: #26384C url('images/portfolio-image-grid3.jpg');
+		-webkit-animation: 20s scroll-bkgd infinite linear;
+		-moz-animation: 20s scroll-bkgd infinite linear;
+		-o-animation: scroll-bkgd infinite linear;
+		-ms-animation: 20s scroll-bkgd infinite linear;
+		animation: 20s scroll-bkgd infinite linear
+	}
+
+	
+@-webkit-keyframes scroll-bkgd {
+  100%{
+    background-position:-960px 0;
+  }
+}
+
+@-moz-keyframes scroll-bkgd {
+  100%{
+    background-position:-960px 0;
+  }
+}
+
+@-o-keyframes scroll-bkgd {
+  100%{
+    background-position:-960px 0;
+  }
+}
+
+@-ms-keyframes scroll-bkgd {
+  100%{
+    background-position:-960px 0
+  }
+}
+
+@keyframes scroll-bkgd {
+  100%{
+    background-position:-960px 0;
+  }
+}
+	
+	
+</style>
+
+</head>
+
+<body> 
+
+
+<div id="collage-container">
+
+<div class="collage-background" style="opacity: 1"></div>
+<div class="collage-background1" style="opacity: 0.9"></div>
+<div class="collage-background" style="opacity: 0.75"></div>
+<div class="collage-background" style="opacity: 0.5"></div>
+<div class="collage-background" style="opacity: 0.25"></div>
+<div class="collage-background" style="opacity: 0.1"></div>
+<div class="collage-background" style="opacity: 0.9"></div>
+<div class="collage-background" style="opacity: 0.75"></div>
+<div class="collage-background2" style="opacity: 0.5"></div>
+<div class="collage-background" style="opacity: 0.25"></div>
+<div class="collage-background" style="opacity: 0.1"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background3" style="opacity: 0.75"></div>
+<div class="collage-background" style="opacity: 0.5"></div>
+<div class="collage-background" style="opacity: 0.25"></div>
+<div class="collage-background" style="opacity: 0.1"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0.5"></div>
+<div class="collage-background" style="opacity: 0.25"></div>
+<div class="collage-background" style="opacity: 0.1"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0.25"></div>
+<div class="collage-background" style="opacity: 0.1"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0.1"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+<div class="collage-background" style="opacity: 0"></div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+</body>
+</html>

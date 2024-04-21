@@ -1,0 +1,642 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Grid</title>
+
+<link href="https://fonts.googleapis.com/css?family=Archivo|Habibi" rel="stylesheet"> 
+
+<style type="text/css">
+	
+	* {
+		box-sizing: border-box
+	}
+	
+	body {
+		font-family: 'Archivo', sans-serif;
+		margin: 0;
+		padding: 0
+	}
+	
+	#intro, #main, #contact {
+		width: 100%; 
+		height: 800px; 
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		/* perspective: 1200px */
+	}
+	
+	#intro {
+		top: 0;
+	}
+	
+	#main {
+		top: 801px;
+	}
+	
+	#contact {
+		top: 1602px;
+	}
+	
+	.inner-container, .inner-container2 {
+		background-position: 0 0;
+		background-size: cover;
+		background-repeat: no-repeat
+	}
+	.inner-container {
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 200px;
+		width: 112%;
+		height: 100%
+		/* transform: rotateY(10deg) */
+	}
+	.inner-container2 {
+		width: 100%;
+		height: 100%;
+		opacity: 0
+	}
+	
+	.info-container {
+		position: absolute;
+		overflow: hidden;
+		width: 40%;
+		color: #FFFFFF;
+		opacity: 0
+	}
+	.info-container p {
+		font-family: 'Archivo', sans-serif;
+		font-size: calc(11px + 0.5vw);
+		line-height: 1.5
+	}
+	
+	.project-heading {
+		font-family: 'Habibi', serif !important;
+		font-size: calc(20px + 1.9vw) !important;
+		line-height: 1.5;
+		margin-bottom: 12px !important
+	}
+	
+	#contact .contact-header {
+		background-color: #B6F3F9;
+		display: inline-block;
+		padding: 8px
+	}
+	
+	#info_3 {
+		color: #441400;
+	}
+	
+	.thumbs {
+		position: absolute;
+		width: 0;
+		background-image: url(../images/thumbs/nlu-1-dsk.jpg); 
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-size: cover
+	}
+	
+	.animate-in {
+		animation: slide-in 1.4s 1;
+		animation-fill-mode: forwards;
+		animation-timing-function: cubic-bezier(.41,.49,.29,.96)
+	}
+	.animate-out {
+		animation: slide-out 1.4s 1;
+		animation-fill-mode: forwards;
+		animation-timing-function: cubic-bezier(.41,.49,.29,.96)
+	}
+	
+	.move-in {
+		animation: slide-right 1.0s ease-in-out 1;
+		animation-fill-mode: forwards 
+	}
+	
+	.move-out {
+		animation: slide-left 1.0s ease-in-out 1;
+		animation-fill-mode: forwards 
+	}
+	
+	.fade-in {
+		animation: fade-in 3.0s ease 1;
+		animation-fill-mode: forwards 
+	}
+	
+	.slide-up {
+		animation: slide-up 0.6s ease 1;
+		animation-fill-mode: forwards 
+	}
+	
+	@keyframes fade-in {
+		0% {opacity: 0}
+		100% {opacity: 1}
+	}
+	
+	@keyframes slide-right {
+		0% {right: -300px; width: 0}
+		100% {right: 30px; width: 50%}
+	}
+	
+	@keyframes slide-left {
+		0% {right: 30px; width: 50%}
+		100% {right: 80%; width: 0}
+	}
+	
+	@keyframes slide-in {
+		0%   {left: 100px; opacity: 0}
+		100% {left: 0; opacity: 1}
+	}
+	@keyframes slide-out {
+		0%   {left: 0; opacity 1}
+		100% {left: -100px; opacity: 0}
+	}
+	
+	@keyframes slide-up {
+		0% {opacity: .25; line-height: 80px}
+		100% {opacity: 1; line-height: 25px}
+	}
+	
+	@keyframes slide-up-dsk {
+		0%   {bottom: -10%; opacity: 0}
+		40%  {bottom: 19%; opacity: 1}
+		100% {bottom: 20%; opacity: 1}
+	}
+	@keyframes slide-down-dsk {
+		0%   {bottom: 20%; opacity: 1}
+		100% {bottom: -10%; opacity: 0}
+	}
+	
+	@keyframes slide-up-mob {
+		0%   {bottom: -10%; opacity: 0}
+		40%  {bottom: 39%; opacity: 1}
+		100% {bottom: 40%; opacity: 1}
+	}
+	@keyframes slide-down-mob {
+		0%   {bottom: 40%; opacity: 1}
+		100% {bottom: -10%; opacity: 0}
+	}
+	
+	[hidden] { display: none; }
+	
+	
+	@media only screen and (min-width: 960px) {
+		
+		.info-container {
+			left: 50px
+		}
+		
+		.thumbs {
+			height: 350px;
+			right: -30px;
+			top: 20%
+		}
+		
+		.animate-up {
+			animation: slide-up-dsk 2.4s 1;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(.15,.83,.37,.94)
+		}
+
+		.animate-down {
+			animation: slide-down-dsk 1.2s 1;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(.15,.83,.37,.94)
+		}
+		
+	}
+	
+	@media only screen and (max-width: 959px) {
+		
+		.info-container {
+			left: 20px
+		}
+		
+		.thumbs {
+			height: 280px;
+			right: -30px;
+			top: 20%
+		}
+		
+		.animate-up {
+			animation: slide-up-mob 2.4s 1;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(.15,.83,.37,.94)
+		}
+
+		.animate-down {
+			animation: slide-down-mob 1.2s 1;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(.15,.83,.37,.94)
+		}
+		
+	}
+	
+</style>
+
+</head>
+
+<body> 
+
+
+<div id="intro">
+
+	<p>Jeff Nishihira is a web developer, designer, and animator in Chicagoland.</p>
+
+</div>
+	
+
+<div id="main">
+ 
+   <div style="position: absolute; top: 5px; right: 5px; z-index: 2">
+  
+	   <a id="projects_1_link" class="projlink" onClick="loadGridItems('1')">NLU Website</a>
+	   <a id="projects_2_link" class="projlink" onClick="loadGridItems('2')">NLU Eagle Logo</a>
+	   <a id="projects_3_link" class="projlink" onClick="loadGridItems('3')">Chipotle</a>
+	   <a id="projects_4_link" class="projlink" onClick="loadGridItems('4')">Mearra</a>
+	   <a id="projects_5_link" class="projlink" onClick="loadGridItems('5')">Chicago Comedy Film Festival</a>
+	   
+   </div>
+   
+   
+   <div id="ic_1" class="inner-container">
+	   <div class="inner-container2" id="inner1"></div>
+   </div>
+   
+   <div id="ic_2" class="inner-container">
+   	   <div class="inner-container2" id="inner2"></div>
+   </div>
+   
+   <div id="ic_3" class="inner-container">
+   	   <div class="inner-container2" id="inner3"></div>
+   </div>
+   
+   <div id="ic_4" class="inner-container">
+   	   <div class="inner-container2" id="inner4"></div>
+   </div>
+   
+   <div id="ic_5" class="inner-container">
+   	   <div class="inner-container2" id="inner5"></div>
+   </div>
+   
+   
+   <div id="thumbs_1" class="thumbs" data-slides1='[
+   "images/thumbs/nlu-1-dsk.jpg",
+   "images/thumbs/nlu-2-dsk.jpg",
+   "images/thumbs/nlu-3-dsk.jpg",
+   "images/thumbs/nlu-4-dsk.jpg",
+   "images/thumbs/nlu-5-dsk.jpg"
+   ]'>
+   </div>
+   
+   <div id="thumbs_2" class="thumbs" data-slides2='[
+   "images/thumbs/eagle-1-dsk.jpg",
+   "images/thumbs/eagle-2-dsk.jpg",
+   "images/thumbs/eagle-3-dsk.jpg"
+   ]'>
+   </div>
+   
+   <div id="thumbs_3" class="thumbs" data-slides3='[
+   "images/thumbs/chipotle-1-dsk.jpg",
+   "images/thumbs/chipotle-2-dsk.jpg",
+   "images/thumbs/chipotle-3-dsk.jpg"
+   ]'>
+   </div>
+   
+   <div id="thumbs_4" class="thumbs" data-slides4='[
+   "images/thumbs/mearra-1-dsk.jpg",
+   "images/thumbs/mearra-2-dsk.jpg"
+   ]'>
+   </div>
+   
+   <div id="thumbs_5" class="thumbs" data-slides5='[
+   "images/thumbs/ccff-1-dsk.png",
+   "images/thumbs/ccff-2-dsk.jpg"
+   ]'>
+   </div>
+   
+   
+   <div id="info_1" class="info-container">
+       <p class="project-heading">National Louis University Website</p>
+	   <p>As a web designer and developer for National Louis University, I was involved in the development and maintenance of nearly all web-related materials, including the main website, university blog, promotional microsites, advertising banners, and marketing emails.</p>
+   </div>
+   
+   <div id="info_2" class="info-container">
+   	   <p class="project-heading">NLU Pathways Logo</p>
+	   <p>The NLU Eagle is used for NLU's Pathways Program and is displayed in many various forms, including T-shirts, buttons, and official university merchandise.</p>
+   </div>
+   
+   <div id="info_3" class="info-container">
+   	   <p class="project-heading">Chipotle</p>
+	   <p>Danaco Solutions requested a online tool where farmers could provide information about being potential local suppliers for its client, Chipotle.</p>
+   </div>
+   
+   <div id="info_4" class="info-container">
+   	   <p class="project-heading">Mearra: Selkie of the Sea</p>
+	   <p>The website for the musical production by Linda M. Smith.</p>
+   </div>
+   
+   <div id="info_5" class="info-container">
+   	   <p class="project-heading">Chicago Comedy Film Festival poster</p>
+	   <p>Won open contests with these entries for the 2014 and 2016 Chicago Comedy Film Festival.</p>
+   </div>
+    
+</div> <!-- /. #main -->
+
+<div id="contact">
+
+	<h2 class="contact-header"><p>Drop me a line at <a href="mailto:jeffnishihira@gmail.com">jeffnishihira@gmail.com</a></p></h2>
+
+</div>
+
+
+<div hidden>
+    <img src="images/thumbs/nlu-1-dsk.jpg">
+	<img src="images/thumbs/nlu-2-dsk.jpg">
+	<img src="images/thumbs/nlu-3-dsk.jpg">
+	<img src="images/thumbs/nlu-4-dsk.jpg">
+	<img src="images/thumbs/nlu-5-dsk.jpg">
+	<img src="images/thumbs/eagle-1-dsk.jpg">
+	<img src="images/thumbs/eagle-2-dsk.jpg">
+	<img src="images/thumbs/eagle-3-dsk.jpg">
+	<img src="images/thumbs/chipotle-1-dsk.jpg">
+	<img src="images/thumbs/chipotle-2-dsk.jpg">
+	<img src="images/thumbs/chipotle-3-dsk.jpg">
+	<img src="images/thumbs/mearra-1-dsk.jpg">
+	<img src="images/thumbs/mearra-2-dsk.jpg">
+	<img src="images/thumbs/nlu-1-mob.jpg">
+	<img src="images/thumbs/nlu-2-mob.jpg">
+	<img src="images/thumbs/nlu-3-mob.jpg">
+	<img src="images/thumbs/nlu-4-mob.jpg">
+	<img src="images/thumbs/nlu-5-mob.jpg">
+	<img src="images/thumbs/eagle-1-mob.jpg">
+	<img src="images/thumbs/eagle-2-mob.jpg">
+	<img src="images/thumbs/eagle-3-mob.jpg">
+	<img src="images/thumbs/chipotle-1-mob.jpg">
+	<img src="images/thumbs/chipotle-2-mob.jpg">
+	<img src="images/thumbs/chipotle-3-mob.jpg">
+	<img src="images/thumbs/mearra-1-mob.jpg">
+	<img src="images/thumbs/mearra-2-mob.jpg">
+</div> <!-- /.image preload -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script language="javascript">
+	
+	var timer;
+	
+	function loadGridItems(grid) {
+		
+		var numItems = 72;
+		var currentGrid = grid;
+		var ic = $('#ic_'+grid);
+		var inf = $('#info_'+grid);
+		var thm = $('#thumbs_'+grid);
+		
+		swapBkgdColor(grid);
+		
+		$('a').each(function(index) {
+			var thisIndex = (index+1);
+
+			$(this).removeAttr("onclick");	    
+			var self = this;
+
+			setTimeout(function() {
+				$(self).attr('onclick', 'loadGridItems("'+thisIndex+'")');
+			}, 2400);
+
+		});
+		
+		
+		$(".inner-container").each(function(index) {
+			
+			var thisIndex = (index+1);
+			
+			if (grid != thisIndex) {
+				
+				if ($(this).is(".animate-in")) {
+					$(this).removeClass("animate-in");
+					$(this).addClass("animate-out");
+
+					var self = this;
+
+					setTimeout(function() {
+						$(self).css('background-image', 'none');
+						$(self).find('div').css('background-image', 'none');
+						$(self).removeClass("animate-out");
+					}, 1400);
+				}
+				
+			} 
+			 
+		});
+		
+		$(".info-container").each(function(index) {
+			
+			var thisIndex = (index+1);
+			
+			if (grid != thisIndex) {
+				
+				if ($(this).is(".animate-up")) {
+					$(this).removeClass("animate-up");
+					$(this).addClass("animate-down");
+
+					var self = this;
+
+					setTimeout(function() {
+						$(self).removeClass("animate-down");
+					}, 1400);
+				}
+				
+			} 
+			 
+		});
+		
+		$(".thumbs").each(function(index) {
+			
+			var thisIndex = (index+1);
+			
+			if (grid != thisIndex) {
+				
+				if ($(this).is(".move-in")) {
+					$(this).removeClass("move-in");
+					$(this).addClass("move-out");
+
+					var self = this;
+
+					setTimeout(function() {
+						$(self).removeClass("move-out");
+					}, 900);
+				}
+				
+			} 
+			 
+		});
+		
+		if (!ic.hasClass("animate-in")) {
+			
+			// var j;
+		
+			// for (j=0; j<numItems; j++) {
+				// ic.append('<div class="grid-item" id="projects_'+(j+1)+'"></div>');
+			// }
+
+			setTimeout(function() {
+				ic.addClass('animate-in');
+				inf.addClass('animate-up');
+				loadFadeImage(grid);
+			}, 900);
+			
+			setTimeout(function() {
+				thm.addClass('move-in');
+				setSlideshow(grid);
+			}, 1800);
+			
+			
+		}
+		
+	}
+	
+	
+	function gridImages(proj) {     
+	
+		if (proj == '') {
+			var proj = 'projects_1';
+		} else {
+			var proj = 'projects_'+proj;
+		}
+
+	    var numItems = [];
+
+		$(".grid-item").each(function( index ) {
+		    numItems.push(index);
+		});
+
+		numItems.sort(function() {
+			return 0.5 - Math.random();
+		})
+		
+		$.each(numItems, function(k,v) {
+			
+			setTimeout(function() {
+				$('#projects_'+(v+1)).css('background-image', "url('test-images/images/"+proj+"_"+(v+1)+".jpg')");
+			}, k * 10)
+			
+		})
+	
+    }
+
+	
+	function loadFadeImage(proj) {	
+		
+		if ($("#ic_"+proj+" .inner-container2").hasClass('fade-in')) {
+			$("#ic_"+proj+" .inner-container2").removeClass('fade-in');
+			$("#ic_"+proj+" .inner-container2").css('opacity', 0)
+		}
+
+		$("#ic_"+proj).css('background-image', "url('images/large/projects_"+proj+"_1.jpg')");
+		
+		setTimeout(function() {
+			$("#ic_"+proj+" .inner-container2").css('background-image', "url('images/large/projects_"+proj+"_2.jpg')");
+		}, 900);
+		
+		setTimeout(function() {
+			$("#ic_"+proj+" .inner-container2").addClass('fade-in');
+		}, 900);
+		
+	}
+	
+	
+	function swapBkgdColor(bcolor) {
+		
+		var bkcolor = bcolor;
+		
+		switch(bkcolor) {
+			case '1':
+				bkcolor = "#111823";
+				break;
+			case '2':
+				bkcolor = "#023388";
+				break;
+			case '3':
+				bkcolor = "#d4b76b";
+				break;
+			case '4':
+				bkcolor = "#0081ac";
+				break;
+			default:
+				bkcolor = "#883802";
+		} 
+		
+	    $( "#main" ).animate({backgroundColor: bkcolor}, 1400);
+		
+	}
+	
+	
+	function setSlideshow(showDiv) {
+		
+		clearTimeout(timer);
+		
+		var slide = $("[data-slides"+showDiv+"]"),
+			count = 0,
+			slides = slide.data("slides"+showDiv),
+			len = slides.length,
+			n = function () {
+				if (count >= len) {
+					count = 0
+				}
+				slide.css("background-image", 'url("' + slides[count] + '")').animate({opacity: 1}, 1000, function() {
+					timer = setTimeout(n, 5000)
+				});
+				count++;
+			};
+		  n();
+		
+	 }
+	
+	
+
+	$.fn.isInViewport = function() {
+	  var elementTop = $(this).offset().top;
+	  var elementBottom = elementTop + $(this).outerHeight();
+
+	  var viewportTop = $(window).scrollTop();
+	  var viewportBottom = viewportTop + $(window).height();
+
+	  return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+	
+	$(window).on('resize scroll', function(e) {
+
+	  $('div').each(function() {
+		  var activeID = $(this).attr('id');
+		if ($(this).isInViewport()) {
+		  $('#contact .contact-header').addClass('slide-up');
+		} else {
+		  $('#contact .contact-header').removeClass('slide-up');
+		}
+	  });
+
+	});
+	
+	/* 
+	var movementStrength = 25;
+	var height = movementStrength / $(window).height();
+	var width = movementStrength / $(window).width();
+	$(".inner-container").mousemove(function(e){
+			  var pageX = e.pageX - ($(window).width() / 2);
+			  var pageY = e.pageY - ($(window).height() / 2);
+			  var newvalueX = width * pageX * -1 - 25;
+			  var newvalueY = height * pageY * -1 - 50;
+			  $('.inner-container').css("background-position", newvalueX+"px     "+newvalueY+"px");
+	});
+	*/
+
+	
+</script>
+
+</body>
+</html>
